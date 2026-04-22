@@ -1,11 +1,26 @@
-<script setup></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <RouterView />
 </template>
 
-<style scoped></style>
+<script>
+import { RouterView } from 'vue-router'
+
+
+export default {
+  name: "app",
+  components: {
+    RouterView,
+  },
+
+}
+</script>
+
+<style lang="scss" scoped>
+
+.box {
+  width: 200px;
+  height: 100px;
+  border: $dark 1px solid;
+  background-color: $primary;
+}
+</style>

@@ -1,28 +1,53 @@
 <template>
 
-<div class="container mx-auto">
+<div class="container is-fullhd">
 
- <!-- <div class="grid min-h-screen grid-cols-1 grid-rows-[100px,1fr,auto] md:grid-cols-[200px,1fr] lg:grid-cols-[400px,1fr,400px]"> -->
-    <div class="grid min-h-screen grid-cols-3 grid-rows-[400px, 1fr, 400px]  md:grid-cols-[200px,1fr] lg:grid-cols-[400px,1fr,400px]">
-    <header class="col-span-full bg-gray-200 p-4">Atlas of Health Variation in head and Neck Cancer in England</header>
-    <aside class=" bg-gray-200 p-4 md:row-start-2 md:block">Left Sidebar</aside>
-    <main class="row-start-2 bg-white p-4 md:col-start-2">Main site content goes here..</main>
-    <aside class=" bg-gray-200 p-4 lg:row-start-2 lg:block">Right Sidebar</aside>
-    <footer class="col-span-full bg-gray-300 p-4">Newcastle University </footer>
+    <header class="has-text-light p-4 mb-4 is-size-4">Atlas of Health Variation in Head and Neck Cancer in England</header>
+    <div class="columns pl-4">
+      <div class="column is-one-fifth">
+        <div class="select is-primary">
+        <select>
+          <option>Select year(s)</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+        </select>
+      </div>
+      </div>
+      <div class="column main-left">
+        <div class="select is-primary">
+          <select>
+            <option>Select cancer incidence rate</option>
+            <option value="Head">Head and Neck</option>
+            <option value="Laryngeal">Laryngeal</option>
+            <option value="Oral">Oral cavity</option>
+            <option value="Oropharyngeal">Oropharyngeal</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="column main-right">
+        <div class="select is-primary">
+          <select>
+            <option>Select mortality rate</option>
+            <option value="Head">Head and Neck</option>
+            <option value="Laryngeal">Laryngeal</option>
+            <option value="Oral">Oral cavity</option>
+            <option value="Oropharyngeal">Oropharyngeal</option>
+          </select>
+        </div>
+      </div>
   </div>
+     <section class="pl-4">
+      <div class="main-section">
+        Charts here
+      </div>
+    </section>
+    <footer class="has-text-light p-2 is-size-7">Newcastle University &#169;2026</footer>
+
 </div>
-
-<section class="section">
-  <div class="container has-text-centered">
-    <h1 class="title">
-      Hello World
-    </h1>
-    <p class="subtitle">
-      My first website with
-      <strong class="has-text-primary">Bulma</strong>!
-    </p>
-  </div>
-</section>
 </template>
 
 <script>
@@ -31,32 +56,26 @@
 <style lang="scss" scoped>
 
 header {
- // max-height: 100px;
+ background-color: $dark;
+ height: auto;
+}
+
+.container {
+  background-color: $light;
+}
+
+.main-left, .main-right {
+  background-color: $light;
+  color: var(--bulma-primary-bold);
+}
+
+.main-section {
+  min-height : 600px;
 }
 
 footer {
-  border: 1px solid $dark;
-  max-height : 100px;
-  font-size: 0.8em;
+   background-color: $dark;
 }
-
-.vertical-header span {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  text-align: left;
-}
-
-span.nowrap {
-  display: inline-block;
-  white-space: nowrap;
-}
-
-.btn-nopad {
-  padding: 0px;
-}
-
-
-
 
 </style>
 

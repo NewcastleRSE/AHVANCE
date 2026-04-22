@@ -1,4 +1,7 @@
 @use "bulma/sass/grid/columns";
+@use "bulma/sass/base";
+@use "bulma/sass/themes";
+@use "bulma/sass/elements/button";
 
 
 

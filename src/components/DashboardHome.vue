@@ -11,6 +11,18 @@
     <footer class="col-span-full bg-gray-300 p-4">Newcastle University </footer>
   </div>
 </div>
+
+<section class="section">
+  <div class="container has-text-centered">
+    <h1 class="title">
+      Hello World
+    </h1>
+    <p class="subtitle">
+      My first website with
+      <strong class="has-text-primary">Bulma</strong>!
+    </p>
+  </div>
+</section>
 </template>
 
 <script>

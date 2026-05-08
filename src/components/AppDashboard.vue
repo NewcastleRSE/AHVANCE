@@ -1,8 +1,6 @@
 <template>
-
+<AppHeader></AppHeader>
 <div class="container is-fullhd">
-
-    <header class="has-text-light p-4 mb-4 is-size-4">Atlas of Health Variation in Head and Neck Cancer in England</header>
     <div class="columns pl-4">
       <div class="column is-one-fifth">
         <div class="select is-primary">
@@ -43,14 +41,40 @@
      <section class="pl-4">
       <div class="main-section">
         Charts here
+
+        <div>
+          <!-- <BarChart :data="chartData" />-->
+        </div>
+
       </div>
     </section>
-    <footer class="has-text-light p-2 is-size-7">Newcastle University &#169;2026</footer>
+
 
 </div>
+<AppFooter></AppFooter>
 </template>
 
 <script>
+
+import AppHeader from "../components/AppHeader.vue"
+import AppFooter from "../components/AppFooter.vue"
+
+export default {
+  name: 'AppDashboard',
+  components: {
+    AppHeader,
+    AppFooter
+  },
+  computed: {
+  },
+  data() {
+
+  },
+  methods: {
+  }
+}
+
+
 </script>
 
 <style lang="scss" scoped>

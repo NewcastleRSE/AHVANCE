@@ -1,6 +1,6 @@
 
  <template>
-  <footer><img src="../assets/images/ncl_logo.png" alt="Newcastle University Logo" /></footer>
+  <footer><img src="../assets/images/ncl_logo.png" alt="Newcastle University Logo" width="200px"/></footer>
 
  </template>
 
@@ -26,6 +26,10 @@ export default {
 
 footer {
    background-color: $dark;
+}
+
+footer img {
+  padding: 1.2em;
 }
 
 </style>

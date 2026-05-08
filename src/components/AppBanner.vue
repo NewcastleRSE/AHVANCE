@@ -47,15 +47,15 @@ hero-body {
 .title {
   color: $light;
   position: relative;
-  top: -130px;
-  left: -60px;
+  top: -160px;
+  left: -100px;
 }
 
 .subtitle {
   color: $light;
   position: relative;
-  top: -80px;
-  left: -60px;
+  top: -130px;
+  left: -100px;
 }
 
 

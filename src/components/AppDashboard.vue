@@ -6,6 +6,10 @@
         <div class="select is-primary">
         <select>
           <option>Select year(s)</option>
+          <option value="2020">2016</option>
+          <option value="2021">2017</option>
+          <option value="2022">2018</option>
+          <option value="2023">2019</option>
           <option value="2020">2020</option>
           <option value="2021">2021</option>
           <option value="2022">2022</option>

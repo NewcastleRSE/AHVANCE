@@ -27,19 +27,19 @@ import { ref } from 'vue'
 
 const tabs = ref([
   {
+    title: 'Accordion',
+    href: '/AHVANCE/accordion',
+    current: false
+  },
+  {
+    title: 'Reminders',
+    href: '/AHVANCE/reminders',
+    current: false
+  },
+   {
     title: 'Overview',
-    href: '/overview',
+    href: '/AHVANCE/overview',
     current: true
   },
-  {
-    title: 'Features',
-    href: '/features',
-    current: false
-  },
-  {
-    title: 'Settings',
-    href: '/settings',
-    current: false
-  }
 ])
 </script>

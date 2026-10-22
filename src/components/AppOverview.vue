@@ -1,17 +1,26 @@
 <template>
   <main class="pt-5">
-    <div class="pb-3">
-      <h1>Welcome to AHVANCE</h1>
-      </div>
-
+    <AppHeader></AppHeader>
+    <AppNavigation></AppNavigation>
+    <h1>Using this site </h1>
+    <div class="">Overview of how to use this site. Click on the tab headers to view and test each feature of the demo</div>
+    <AppFooter></AppFooter>
   </main>
 </template>
 
 <script>
 
+import AppHeader from "../components/AppHeader.vue"
+import AppNavigation from "../components/AppNavigation.vue"
+// import AppAccordion from "../components/AppAccordion.vue"
+import AppFooter from "../components/AppFooter.vue"
+
 export default {
-  name: 'AppContact',
+  name: 'AppOverview',
   components: {
+    AppHeader,
+    AppNavigation,
+    AppFooter
 
   },
   computed: {

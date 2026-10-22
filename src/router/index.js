@@ -1,11 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-//import AppWelcome from "../components/AppWelcome.vue"
-import AppDashboard from "../components/AppDashboard.vue"
-import AppAbout from "../components/AppAbout.vue"
-import AppContact from "../components/AppContact.vue"
-import AppFAQ from "../components/AppFAQ.vue"
-
 import SweetDemo from "../components/SweetDemo.vue"
 
 
@@ -14,24 +8,7 @@ const router = createRouter({
   routes: [
      {
       path: "/",
-      // component: AppWelcome
       component: SweetDemo
-    },
-     {
-      path: "/dashboard",
-      component: AppDashboard
-    },
-     {
-      path: "/about",
-      component: AppAbout
-    },
-     {
-      path: "/faq",
-      component: AppFAQ
-    },
-     {
-      path: "/contact",
-      component: AppContact
     }
   ],
 })

@@ -2,7 +2,7 @@
 
   <div class="mx-auto p-4 space-y-3 mt-6">
 
-    <div class="my-2">Here are some top tips to help you to take your CDK4/6 inhibitors as required.</div>
+    <div class="mb-6 ml-4 text-lg text-gray-500">Here are some top tips to help you to take your CDK4/6 inhibitors as required.</div>
     <div
       v-for="(item, index) in accordionItems"
       :key="index"

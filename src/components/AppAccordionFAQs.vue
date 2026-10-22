@@ -1,5 +1,7 @@
 <template>
   <div class="mx-auto p-4 space-y-3 mt-6">
+
+    <div class="mb-6 ml-4 text-lg text-gray-500">Here you can find answers to any questions you might have about taking CDK4/6 inhibitors.</div>
     <div
       v-for="(item, index) in accordionItems"
       :key="index"

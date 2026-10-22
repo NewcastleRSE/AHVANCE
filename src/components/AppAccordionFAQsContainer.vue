@@ -11,7 +11,7 @@
 
 import AppHeader from "../components/AppHeader.vue"
 import AppNavigation from "../components/AppNavigation.vue"
-import AppAccordionFAQs from "./AppAccordionFAQs.vue/index.js"
+import AppAccordionFAQs from "./AppAccordionFAQs.vue"
 import AppFooter from "../components/AppFooter.vue"
 
 export default {

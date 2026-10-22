@@ -5,7 +5,8 @@
 
     <h1 class="text-3xl m-4">Using this site</h1>
     <h2 class="text-xl m-4">This website is a demo on new features for the HT&Me website.</h2>
-    <div class="m-4">Click on the tab headers to view and test each feature of the demo</div>
+    <div class="mb-6 ml-4 text-lg text-gray-500 min-h-128">Click on the tab headers to view and test each feature of the demo</div>
+
 
     <AppFooter></AppFooter>
   </main>

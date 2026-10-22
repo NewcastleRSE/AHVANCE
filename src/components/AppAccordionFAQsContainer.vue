@@ -2,7 +2,7 @@
   <main class="pt-5">
     <AppHeader></AppHeader>
     <AppNavigation></AppNavigation>
-   <AppAccordion></AppAccordion>
+    <AppAccordionFAQs></AppAccordionFAQs>
     <AppFooter></AppFooter>
   </main>
 </template>
@@ -11,7 +11,7 @@
 
 import AppHeader from "../components/AppHeader.vue"
 import AppNavigation from "../components/AppNavigation.vue"
-import AppAccordion from "../components/AppAccordion.vue"
+import AppAccordionFAQs from "./AppAccordionFAQs.vue/index.js"
 import AppFooter from "../components/AppFooter.vue"
 
 export default {
@@ -20,7 +20,7 @@ export default {
     AppHeader,
     AppNavigation,
     AppFooter,
-    AppAccordion
+    AppAccordionFAQs
   },
   computed: {
   },

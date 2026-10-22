@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import SweetDemo from "../components/SweetDemo.vue"
-import AppAccordionContainer from '@/components/AppAccordionContainer.vue'
+import AppAccordionTopTipsContainer from '@/components/AppAccordionTopTipsContainer.vue'
+import AppAccordionFAQsContainer from '@/components/AppAccordionFAQsContainer.vue'
 
 
 const router = createRouter({
@@ -17,11 +18,11 @@ const router = createRouter({
     },
     {
       path: "/toptips",
-      component: AppAccordionContainer
+      component: AppAccordionTopTipsContainer
     },
     {
       path: "/faqs",
-      component: AppAccordionContainer
+      component: AppAccordionFAQsContainer
     },
     {
       path: "/",

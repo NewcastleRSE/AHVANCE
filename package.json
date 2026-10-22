@@ -13,7 +13,6 @@
     "lint:eslint": "eslint . --fix --cache"
   },
   "dependencies": {
-    "bulma": "^1.0.4",
     "d3": "^7.9.0",
     "pinia": "^3.0.4",
     "vue": "^3.5.32",
@@ -21,6 +20,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@tailwindcss/vite": "^4.3.3",
     "@vitejs/plugin-vue": "^6.0.6",
     "@vitest/eslint-plugin": "^1.6.16",
     "@vue/test-utils": "^2.4.6",
@@ -33,7 +33,7 @@
     "oxlint": "~1.60.0",
     "sass": "^1.99.0",
     "sass-embedded": "^1.99.0",
-    "tailwindcss": "^4.2.2",
+    "tailwindcss": "^4.3.3",
     "vite": "^8.0.8",
     "vite-plugin-vue-devtools": "^8.1.1",
     "vitest": "^4.1.4"

@@ -1,4 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
+import tailwindcss from "@tailwindcss/vite";
 
 import { defineConfig } from 'vite'
 
@@ -11,6 +12,7 @@ export default defineConfig({
   plugins: [
     vue(),
   //  vueDevTools(),
+    tailwindcss()
   ],
   css: {
     preprocessorOptions: {

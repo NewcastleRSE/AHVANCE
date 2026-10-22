@@ -1,77 +1,55 @@
 <template>
- <nav class="navbar" role="navigation" aria-label="main navigation">
-   <div>
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item">
-        Home
-      </a>
-      <a class="navbar-item">
-        About
-      </a>
-      <a class="navbar-item">
-          Contact
-      </a>
-
-    </div>
-   <div class="navbar-end">
-       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Study Results
+  <div class="max-w-xl mx-auto p-4 pt-8 mt-6">
+    <!-- Tabbed Header Navigation with Hyperlinks -->
+    <div class="border-b border-gray-200">
+      <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+        <a
+          v-for="(tab, index) in tabs"
+          :key="index"
+          :href="tab.href"
+          :class="[
+            'py-4 px-1 inline-flex items-center gap-2 border-b-2 font-medium text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2',
+            tab.current
+              ? 'border-bottom-blue-600 text-blue-600'
+              : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+          ]"
+          :aria-current="tab.current ? 'page' : undefined"
+        >
+          {{ tab.title }}
         </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            2020
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            2021
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            2022
-          </a>
-           <hr class="navbar-divider">
-          <a class="navbar-item">
-            2023
-          </a>
-        </div>
-      </div>
+      </nav>
     </div>
   </div>
-</nav>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue'
 
-export default {
-  name: 'AppNavigation',
-  components: {
-
+const tabs = ref([
+  {
+    title: 'Using this site',
+    href: '/AHVANCE/using',
+    current: false
   },
-  computed: {
+  {
+    title: 'Top Tips',
+    href: '/AHVANCE/toptips',
+    current: false
   },
-  data() {
-
+  {
+    title: 'FAQs',
+    href: '/AHVANCE/faqs',
+    current: false
   },
-  methods: {
-  }
-}
+  {
+    title: 'Reminders',
+    href: '/AHVANCE/reminders',
+    current: false
+  },
+   {
+    title: 'Make a Plan',
+    href: '/AHVANCE/makeaplan',
+    current: false
+  },
+])
 </script>
-
-
-<style lang="scss" scoped>
-
-.navbar-menu {
-   background: radial-gradient(circle,rgba(240, 159, 132, 1) 0%, rgba(242, 240, 216, 1) 91%);
-}
-
-</style>

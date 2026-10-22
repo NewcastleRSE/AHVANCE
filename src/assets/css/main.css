@@ -1,0 +1,275 @@
+@import "tailwindcss";
+
+@theme {
+  /* Define your brand colors */
+  --color-brand-purple: #633188;
+  --color-brand-light: #e3e3e0;
+  --color-brand-pink: #d2c0d9;
+  --color-brand-lilac: #a08db0;
+  --color-brand-grey: #b3b3b2;
+  --color-brand-light-grey: #e6e6e3;
+  --color-brand-gold: #f0c048;
+  --color-brand-light-gold: #F9EDD0;
+  --color-brand-pink: #d2c0d9;
+  --color-brand-lilac: #a08db0;
+  --color-brand-off-white: #fafafa;
+  --color-brand-dark-grey: #828280;
+  --color-brand-charcoal: #585857;
+
+  --color-blue:#3535ee;
+  --color-green:#196b1d;
+  --color-yellow:#f1dc1f;
+  --color-aqua:#40e0d0;
+
+  --font-sans: "Manrope", "Roboto", Arial, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa !important;
+  font-family: "Manrope", sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.content-main {
+  display: flow-root;
+}
+
+.print-document-header,
+.print-document-title,
+.print-document-footer {
+  display: none;
+}
+
+@media print {
+  body {
+    background: white !important;
+  }
+
+  .print-hidden,
+  header,
+  footer {
+    display: none !important;
+  }
+
+  .page-hero {
+    display: none !important;
+  }
+
+  .print-document-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    height: 4.5rem;
+    padding: 0 1.25rem;
+    background: #633188;
+    color: white;
+    font-size: 2rem;
+  }
+
+  .print-document-header img {
+    width: 2.25rem;
+    height: 2.25rem;
+    object-fit: contain;
+  }
+
+  .print-document-title {
+    display: block;
+    width: min(100% - 3rem, 64rem);
+    margin: 1.5rem auto 2rem;
+    padding: 0.75rem 0;
+    border-top: 1px solid #633188;
+    border-bottom: 3px solid #633188;
+    color: #633188;
+    font-size: 2rem;
+    letter-spacing: 0.08em;
+    text-align: center;
+  }
+
+  main {
+    padding-top: 0 !important;
+  }
+
+  .print-document-footer {
+    display: block;
+    height: 1.25rem;
+    margin-top: 2rem;
+    background: #633188;
+    border-top: 0.35rem solid #b3b3b2;
+  }
+}
+
+/* Ensure markdown links are colored and underlined */
+/* Global Markdown Styling for all dynamic markdown content */
+.markdown-body a,
+.prose a {
+  color: #2563eb; /* Tailwind blue-600 */
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.markdown-body a:hover,
+.prose a:hover {
+  color: #1d4ed8; /* Tailwind blue-700 */
+}
+.prose ul > li::marker {
+  color: var(--color-brand-gold);
+  font-size: 3rem;
+}
+
+.markdown-body ul,
+.prose ul {
+ list-style: none;
+  padding-left: 0;
+}
+
+.markdown-body ul li,
+.prose ul li {
+ position: relative;
+  padding-left: 1.75rem; /* Space for the custom bullet */
+  margin-bottom: 0.5rem; /* Space between list items */
+}
+
+.markdown-content ul li::before,
+.prose ul li::before {
+  content: '\2023';
+  color: var(--color-brand-gold);
+font-weight: bold;
+    font-size: 36px;
+    line-height: 0.9em;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: relative;
+    top: 0.1em;
+}
+
+.markdown-body ol,
+.prose ol {
+  list-style-type: decimal !important;
+  padding-left: 1.5rem !important;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-body li,
+.prose li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.accordion-item {
+  overflow: hidden;
+  border: 1px solid #dedede;
+  background: white;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 5rem;
+  padding: 0.85rem 1.5rem;
+  color: #292929;
+  text-align: left;
+  transition: background-color 150ms ease;
+}
+
+.accordion-header:hover {
+  background: #fafafa;
+}
+
+.accordion-item-open .accordion-header {
+  background: #f9edd0;
+}
+
+.accordion-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  flex-shrink: 0;
+}
+
+.accordion-icon-image {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+}
+
+.accordion-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.accordion-chevron {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  color: #2d2d2d;
+  transition: transform 150ms ease, color 150ms ease;
+}
+
+.accordion-item-open .accordion-chevron {
+  color: var(--color-brand-gold);
+}
+
+.accordion-content {
+  padding: 1.5rem 1.5rem 1.25rem;
+  border-top: 1px solid #dedede;
+  background: white;
+  color: #292929;
+  font-size: 1.125rem;
+  line-height: 1.55;
+}
+
+.accordion-content :deep(p) {
+  margin: 0 0 1.5rem;
+}
+
+.accordion-content :deep(ul) {
+  margin: 0 0 1.5rem;
+  padding-left: 2rem;
+}
+
+.accordion-close-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.25rem;
+}
+
+.accordion-close {
+  padding: 0.55rem 1rem;
+  border-radius: 0.25rem;
+  background: var(--color-brand-purple);
+  color: white;
+  font-size: 1rem;
+}
+
+.accordion-close:hover {
+  background: var(--color-brand-lilac);
+}
+
+@media (max-width: 640px) {
+  .accordion-header {
+    min-height: 4.5rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .accordion-title {
+    font-size: 1.05rem;
+  }
+
+  .accordion-content {
+    padding: 1.25rem 1rem 1rem;
+    font-size: 1rem;
+  }
+}

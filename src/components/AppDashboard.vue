@@ -81,29 +81,7 @@ export default {
 
 </script>
 
-<style lang="scss" scoped>
-
-header {
- background-color: $dark;
- height: auto;
-}
-
-.container {
-  background-color: $light;
-}
-
-.main-left, .main-right {
-  background-color: $light;
-  color: var(--bulma-primary-bold);
-}
-
-.main-section {
-  min-height : 600px;
-}
-
-footer {
-   background-color: $dark;
-}
+<style>
 
 </style>
 

@@ -27,9 +27,6 @@ export default {
   },
   computed: {
   },
-  data() {
-
-  },
   methods: {
   }
 }

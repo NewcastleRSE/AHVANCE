@@ -1,17 +1,21 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import AppWelcome from "../components/AppWelcome.vue"
+//import AppWelcome from "../components/AppWelcome.vue"
 import AppDashboard from "../components/AppDashboard.vue"
 import AppAbout from "../components/AppAbout.vue"
 import AppContact from "../components/AppContact.vue"
 import AppFAQ from "../components/AppFAQ.vue"
+
+import SweetDemo from "../components/SweetDemo.vue"
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
      {
       path: "/",
-      component: AppWelcome
+      // component: AppWelcome
+      component: SweetDemo
     },
      {
       path: "/dashboard",

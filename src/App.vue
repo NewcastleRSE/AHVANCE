@@ -15,12 +15,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style>
 
-.box {
-  width: 200px;
-  height: 100px;
-  border: $dark 1px solid;
-  background-color: $primary;
-}
 </style>

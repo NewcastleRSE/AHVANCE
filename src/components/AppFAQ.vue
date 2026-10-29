@@ -7,24 +7,4 @@
   </main>
 </template>
 
-<script>
 
-export default {
-  name: 'AppFAQ',
-  components: {
-
-  },
-  computed: {
-  },
-  data() {
-
-  },
-  methods: {
-  }
-}
-</script>
-
-
-<style scoped>
-
-</style>

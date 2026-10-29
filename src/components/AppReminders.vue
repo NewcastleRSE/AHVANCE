@@ -71,9 +71,25 @@ const onMethodChange = (row) => {
 </script>
 
 <template>
-  <div class="my-8 p-6 bg-white border border-gray-200 rounded-lg shadow-sm max-w-2xl mx-auto">
-    <h2 class="text-2xl font-bold mb-6 text-gray-800">Set a reminder to request blood tests</h2>
 
+
+<button class="accordion-header" aria-expanded="true">
+  <div class="flex items-center gap-3">
+    <div class="accordion-icon" >
+
+
+
+      <img src="../assets/images/bell_74b360e192.png" alt="" class="accordion-icon-image">
+
+
+      <span class="accordion-title">Set a reminder for taking your hormone therapy and/or collecting your prescription</span>
+    </div>
+  </div>
+</button>
+<div class="my-8 p-6 text-gray-700 leading-relaxed prose text-1xl"><p class="m-4">Here you can choose to receive an email or text message to remind you to take your hormone therapy, or collect your prescription.</p>
+<p class="m-4">You can choose one or all of the options listed below by ticking the box. If you would like to cancel these reminders just come back to this page and untick the box.</p>
+</div>
+  <div class="my-8 p-6 bg-white border border-gray-200 rounded-lg shadow-sm max-w-2xl mx-auto">
 
     <form @submit.prevent="" class="space-y-6">
 
@@ -198,3 +214,20 @@ const onMethodChange = (row) => {
 
   </div>
 </template>
+
+<style scoped>
+  .accordion-header, .accordion-header:hover {
+    background-color: #F9EDD0;
+    margin: 1.25em;
+    border: 1px solid #dfdddd;
+  }
+
+  .accordion-title {
+    min-width: 1000px;
+    margin-left: 10px;
+  }
+  .accordion-icon {
+      margin-left: 500px;
+      width: 50px;
+  }
+</style>>

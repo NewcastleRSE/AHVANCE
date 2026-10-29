@@ -44,20 +44,4 @@
 
  </template>
 
-<script>
 
-export default {
-  name: 'AppFooter',
-  components: {
-
-  },
-  computed: {
-  },
-  methods: {
-  }
-}
-</script>
-
-
-<style>
-</style>

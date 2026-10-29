@@ -1,55 +1,3 @@
-<template>
-  <div class="mx-auto p-4 space-y-3 mt-6">
-
-    <div class="mb-6 ml-4 text-lg text-gray-500">Here you can find answers to any questions you might have about taking CDK4/6 inhibitors.</div>
-    <div
-      v-for="(item, index) in accordionItems"
-      :key="index"
-      class="accordion-item"
-    >
-      <!-- Accordion Header / Button -->
-      <button
-        @click="toggle(index)"
-        type="button"
-        class="accordion-header"
-        :aria-expanded="openIndex === index"
-      >
-        <span class="accordion-title">{{ item.title }}</span>
-
-        <!-- Chevron Icon explicitly set to 100px width -->
-        <svg
-          class="accordion-chevron"
-          :class="{ 'rotate-180': openIndex === index }"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-      </button>
-
-       <!-- Accordion Content -->
-      <div
-        v-show="openIndex === index"
-        class="px-4 pb-4 pt-1 text-gray-600 bg-white border-t border-gray-100 space-y-3"
-      >
-        <!-- Renders paragraphs as an array or splits multiline text strings -->
-        <p
-          v-for="(paragraph, pIndex) in getParagraphs(item.content)"
-          :key="pIndex"
-        >
-          {{ paragraph }}
-        </p>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 
@@ -120,8 +68,6 @@ const accordionItems = ref([
 ])
 
 
-
-
 // Helper function to normalise content whether it is passed as an Array or a String with newlines
 const getParagraphs = (content) => {
   if (Array.isArray(content)) {
@@ -137,4 +83,57 @@ const toggle = (index) => {
   openIndex.value = openIndex.value === index ? null : index
 }
 </script>
+
+
+<template>
+  <div class="mx-auto p-4 space-y-3 mt-6">
+
+    <div class="mb-6 ml-4 text-lg text-gray-500">Here you can find answers to any questions you might have about taking CDK4/6 inhibitors.</div>
+    <div
+      v-for="(item, index) in accordionItems"
+      :key="index"
+      class="accordion-item"
+    >
+      <!-- Accordion Header / Button -->
+      <button
+        @click="toggle(index)"
+        type="button"
+        class="accordion-header"
+        :aria-expanded="openIndex === index"
+      >
+        <span class="accordion-title">{{ item.title }}</span>
+
+        <!-- Chevron Icon explicitly set to 100px width -->
+        <svg
+          class="accordion-chevron"
+          :class="{ 'rotate-180': openIndex === index }"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </button>
+
+       <!-- Accordion Content -->
+      <div
+        v-show="openIndex === index"
+        class="px-4 pb-4 pt-1 text-gray-600 bg-white border-t border-gray-100 space-y-3"
+      >
+        <!-- Renders paragraphs as an array or splits multiline text strings -->
+        <p
+          v-for="(paragraph, pIndex) in getParagraphs(item.content)"
+          :key="pIndex"
+        >
+          {{ paragraph }}
+        </p>
+      </div>
+    </div>
+  </div>
+</template>
 

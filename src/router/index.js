@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import SweetDemo from "../components/SweetDemo.vue"
+import SweetDemo from "@/components/SweetDemo.vue"
 import AppAccordionTopTipsContainer from '@/components/AppAccordionTopTipsContainer.vue'
 import AppAccordionFAQsContainer from '@/components/AppAccordionFAQsContainer.vue'
+import AppReminderContainer from '@/components/AppReminderContainer.vue'
 
 
 const router = createRouter({
@@ -25,8 +26,8 @@ const router = createRouter({
       component: AppAccordionFAQsContainer
     },
     {
-      path: "/",
-      component: SweetDemo
+      path: "/reminders",
+      component: AppReminderContainer
     },
     {
       path: "/",
